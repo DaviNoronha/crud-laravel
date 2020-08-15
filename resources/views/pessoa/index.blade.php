@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <h1>Pessoas Cadastradas</h1>
 
-<a href="/pessoas/create" class="btn btn-success">Cadastrar nova pessoa</a>
+<a href="/pessoas/create" class="btn btn-info">Cadastrar nova pessoa</a>
 
 <hr>
 
@@ -17,18 +17,20 @@
         <td>{{ $p->nome}}</td>
         <td>{{ $p->telefone}}</td>
         <td>{{ $p->email}}</td>
-        <td>---</td>
+        <td>
+            <a href="/pessoas/{{$p->id}}/edit" class="btn btn-info">Editar</a>
+        </td>
     </tr>
     @endforeach
 </table>
 
 <style>
 html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #222628;
+                color: #fff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
-                margin: 0;
+                margin: 10px;
             }
 </style>
