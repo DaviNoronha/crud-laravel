@@ -19,6 +19,12 @@
         <td>{{ $p->email}}</td>
         <td>
             <a href="/pessoas/{{$p->id}}/edit" class="btn btn-info">Editar</a>
+
+            <form action="/pessoas/{{ $p->id }}" method="post">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="Excluir" class="btn btn-danger mt-2">
+            </form>
         </td>
     </tr>
     @endforeach
@@ -33,4 +39,5 @@ html, body {
                 height: 100vh;
                 margin: 10px;
             }
+
 </style>
