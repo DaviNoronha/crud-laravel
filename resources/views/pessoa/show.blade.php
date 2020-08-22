@@ -11,6 +11,7 @@
 <a class="btn btn-info" href="/pessoas">Não</a>
 
 <style>
+    
 html, body {
     background-color: #222628;
     color: #fff;
