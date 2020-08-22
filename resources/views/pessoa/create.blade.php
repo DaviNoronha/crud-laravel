@@ -1,6 +1,10 @@
 @extends('template.master')
 
-@section('titulo', 'Formulário')
+@if (isset($pessoa))
+@section('titulo', 'Editar Perfil')
+@else
+@section('titulo', 'Cadastrar Perfil')
+@endif
 
 @section('conteudo')
 
