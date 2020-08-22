@@ -17,9 +17,9 @@
         <form action="/pessoas" method="post">
 @endif
     @csrf
-    <input type="text" name="nome" value="{{ $pessoa->nome ?? ''}}"required>
-    <input type="text" name="telefone" value="{{ $pessoa->telefone ?? ''}}" required>
-    <input type="text" name="email" value="{{ $pessoa->email ?? ''}}" required>
+    <input placeholder="Insira seu Nome" type="text" name="nome" value="{{ $pessoa->nome ?? ''}}"required>
+    <input placeholder="Insira seu Telefone" type="text" name="telefone" value="{{ $pessoa->telefone ?? ''}}" required>
+    <input placeholder="Insira seu Email" type="text" name="email" value="{{ $pessoa->email ?? ''}}" required>
     <button type="submit" class="btn btn-info" text="nome">Salvar</button>
 </form>
 

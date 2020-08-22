@@ -9,7 +9,9 @@ class PessoaController extends Controller
 {
     public function index() 
     {
-        $pessoas = Pessoa::all();
+        // $pessoas = Pessoa::all();
+        $pessoas = auth()->user()->pessoas;
+
         return view('pessoa.index', compact('pessoas'));
     }
 
@@ -28,7 +30,16 @@ class PessoaController extends Controller
 
         // $pessoa->save();
 
-        Pessoa::create($request->all());
+        // Pessoa::create($request->all());
+
+        // Pessoa::create([
+        //     'nome' => $request->nome,
+        //     'telefone' => $request->telefone,
+        //     'email' => $request->email,
+        //     'user_id' => auth()->user()->id,
+        // ]);
+
+        auth()->user()->pessoas()->create($request->all());
 
         return redirect('/pessoas');
     }

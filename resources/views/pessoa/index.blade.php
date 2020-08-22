@@ -1,12 +1,12 @@
-@extends('template.master')
+@extends('layouts.app')
 
-@section('titulo', 'Cadastro')
+{{-- @section('titulo', 'Cadastro') --}}
 
-@section('conteudo')
+@section('content')
 
 <h1>Pessoas Cadastradas</h1>
 
-<a href="/pessoas/create" class="btn btn-info">Cadastrar nova pessoa</a>
+<a href="/pessoas/create" class="btn btn-primary">Cadastrar nova pessoa</a>
 
 <hr>
 
@@ -23,7 +23,7 @@
         <td>{{ $p->telefone}}</td>
         <td>{{ $p->email}}</td>
         <td>
-            <a href="/pessoas/{{$p->id}}/edit" class="btn btn-info">Editar</a>
+            <a href="/pessoas/{{$p->id}}/edit" class="btn btn-primary">Editar</a>
             <a href="/pessoas/{{$p->id}}" class="btn btn-danger">Excluir</a>
         </td>
     </tr>
@@ -48,7 +48,7 @@ h1 {
 
 tr,th {
     background-color: #222628;
-    color: #ba0d3e;
+    color: #fff;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     margin: 10px;
@@ -56,7 +56,7 @@ tr,th {
 
 tr,td {                
     background-color: #222628;
-    color: #5bc0de;
+    color: #fff;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     margin: 10px;

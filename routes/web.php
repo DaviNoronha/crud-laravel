@@ -16,16 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::middleware('auth')->group(function () {
+    // Route::get('pessoas', 'PessoaController@index');
+    // Route::post('pessoas', 'PessoaController@store');
+    // Route::get('pessoas/create', 'PessoaController@create');
+    // Route::get('pessoas/{pessoa}/edit', 'PessoaController@edit');
+    // Route::get('pessoas/{pessoa}', 'PessoaController@show');
+    // Route::put('pessoas/{pessoa}', 'PessoaController@update');
+    // Route::delete('pessoas/{pessoa}', 'PessoaController@destroy');
 
-// Route::get('pessoas', 'PessoaController@index');
-// Route::post('pessoas', 'PessoaController@store');
-// Route::get('pessoas/create', 'PessoaController@create');
-// Route::get('pessoas/{pessoa}/edit', 'PessoaController@edit');
-// Route::get('pessoas/{pessoa}', 'PessoaController@show');
-// Route::put('pessoas/{pessoa}', 'PessoaController@update');
-// Route::delete('pessoas/{pessoa}', 'PessoaController@destroy');
+    Route::resource('pessoas', 'PessoaController');
+});
 
-Route::resource('pessoas', 'PessoaController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
