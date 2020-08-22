@@ -12,4 +12,9 @@ class Pessoa extends Model
         'email',
         'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
