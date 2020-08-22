@@ -1,6 +1,6 @@
 @extends('template.master')
 
-@section('titulo', 'Davi')
+@section('titulo', 'Cadastro')
 
 @section('conteudo')
 
